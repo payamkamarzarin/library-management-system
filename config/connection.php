@@ -22,3 +22,6 @@ class DatabaseConnection
         return $this->pdo;
     }
 }
+
+//$connection = new DatabaseConnection();
+//$connection->getConnection();
