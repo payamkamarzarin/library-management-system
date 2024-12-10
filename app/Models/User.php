@@ -21,8 +21,7 @@ class User {
 
     public function save()
     {
-        $query = "INSERT INTO $this->table (firstname, lastname, phonenumber, email, password, created_at) 
-                  VALUES (:firstname, :lastname, :phonenumber, :email, :password, :created_at)";
+        $query = "INSERT INTO $this->table (firstname, lastname, phonenumber, email, password, created_at) VALUES (:firstname, :lastname, :phonenumber, :email, :password, :created_at)";
 
         $stmt = $this->db->prepare($query);
         $hashedPassword = password_hash($this->password, PASSWORD_DEFAULT);
